@@ -1,0 +1,303 @@
+/* Base Reset & Fonts */
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f9f8f6;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    background-color:  #d8c6b0;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.logo {
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #a67c52; 
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('images/promo.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1rem;
+}
+
+/* Info Cards Section */
+.info-section {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+    gap: 25px;
+    align-items: center;
+}
+
+.info-card {
+    background-color: #fff9e6;
+    padding: 20px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 340px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.info-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.info-card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.info-card a {
+    color: #a67c52;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.info-card a:hover {
+    color: #333; 
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #222;
+    color: #eee;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-left img {
+    height: 35px;
+}
+
+/* --- Desktop Layout --- */
+@media (min-width: 768px) {
+    header {
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo {
+        margin-bottom: 10px; 
+    }
+
+    nav ul {
+        gap: 25px;
+    }
+
+    .hero {
+        padding: 100px 40px;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .info-section {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 50px 40px;
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 40px;
+        text-align: left;
+    }
+}
+
+/* Mangata & Gallo Collection Styles (Colors matched to theme) */
+.product-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    max-width: 100vw; /* full viewport width */
+    margin: 20px 0 40px 0;
+    padding: 0 15px; /* small side padding */
+    box-sizing: border-box;
+}
+
+.product {
+    background: #FFE4E1;
+    border-radius: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 15px;
+    display: flex;
+    gap: 20px;
+    width: 100%; /* full width of container */
+    box-sizing: border-box;
+}
+
+.product-image {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.product-details {
+    flex: 1;
+}
+
+
+.product-details h2 {
+    margin: 0 0 8px;
+    font-size: 1.3rem;
+    color: #a67c52; /* your gold/brown accent */
+    font-family: 'Playfair Display', serif; /* consistent font */
+}
+
+.product-details p {
+    margin: 0 0 10px;
+    color: #666666; /* subtle text color */
+}
+
+.product-price {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #333333; /* your main text color */
+}
+
+.about {
+  background: #fff9e6;
+  border-radius: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 25px;
+  margin: 20px;
+  box-sizing: border-box;
+  line-height: 1.6;
+  color: #333;
+  font-size: 1rem;
+}
+/* book vist */
+
+.book-visit {
+  padding: 2rem;
+  background-color: #fff9e6;
+  font-family: 'Open Sans', sans-serif;
+  max-width: 600px;
+  margin: 2rem auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.book-visit h2 {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.book-visit form {
+  display: flex;
+  flex-direction: column;
+}
+
+.book-visit label {
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+
+.book-visit input,
+.book-visit select {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.book-visit button {
+  margin-top: 1.5rem;
+  padding: 0.8rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.book-visit button:hover {
+  background-color: #555;
+}
+
+/*book */
+
+ .container {
+      background: white;
+      padding: 2rem 3rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      max-width: 450px;
+    }

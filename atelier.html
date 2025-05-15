@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mangata & Gallo</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+
+  <header>
+    <img src="images/logo.png" alt="Mangata & Gallo Logo" class="logo">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="explore.html">Rings</a></li>
+        <li><a href="atelier.html">Atelier</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="book-visit">
+  <h2>Book a Visit</h2>
+  <form action="#" method="post">
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="number">Phone Number:</label>
+    <input type="tel" id="number" name="number" required pattern="[0-9]{10}" placeholder="e.g., 9876543210">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="store">Select Store:</label>
+    <select id="store" name="store" required>
+      <option value="">-- Please choose a store --</option>
+      <option value="Austin, Texas">Austin, Texas</option>
+      <option value="Los-angeles">Los Angeles</option>
+      <option value="Chicago">Chicago</option>
+      <option value="San-francisco">San Francisco</option>
+    </select>
+
+    <button type="submit">Book Now</button>
+  </form>
+</section>
+</main>
+
+<script>
+ 
+  $(document).ready(function () {
+    $('form').on('submit', function (e) {
+      e.preventDefault(); // Prevent default form submission
+      window.location.href = 'submit.html'; // Redirect to success page
+    });
+  });
+</script>
+
+
+
+    <footer>
+    <div class="footer-left">
+      <img src="images/mangata-gallo-footer-logo.png" alt="Mangata & Gallo Small Logo">
+    </div>
+    <div class="footer-right">
+      <p>© 2025 Mangata & Gallo. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
