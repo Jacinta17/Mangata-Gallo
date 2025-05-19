@@ -135,45 +135,50 @@ footer {
 
 /* --- Desktop Layout --- */
 @media (min-width: 768px) {
-    header {
-        flex-direction: column; 
-        align-items: center;
-        text-align: center;
-    }
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    text-align: left;
+  }
 
-    .logo {
-        margin-bottom: 10px; 
-    }
+  nav ul {
+    flex-direction: row;
+    gap: 25px;
+  }
 
-    nav ul {
-        gap: 25px;
-    }
+  .hero {
+    padding: 100px 40px;
+  }
 
-    .hero {
-        padding: 100px 40px;
-    }
+  .hero h1 {
+    font-size: 2.8rem;
+  }
 
-    .hero h1 {
-        font-size: 2.8rem;
-    }
+  .hero p {
+    font-size: 1.2rem;
+  }
 
-    .hero p {
-        font-size: 1.2rem;
-    }
+  .info-section {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 50px 40px;
+  }
 
-    .info-section {
-        flex-direction: row;
-        justify-content: space-around;
-        padding: 50px 40px;
-    }
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 40px;
+    text-align: left;
+  }
 
-    footer {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 20px 40px;
-        text-align: left;
-    }
+  .footer-left,
+  .footer-right {
+    width: auto;
+  }
 }
+
 
 /* Mangata & Gallo Collection Styles (Colors matched to theme) */
 .product-list {
